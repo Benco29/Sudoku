@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="sudoku.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Sudoku</title>
+  </head>
+  <body id="board" onload="goToBoard()">
+
+      <div class="boardContainer">
+
+          <div class="container btnContainer">
+              <div class="row">
+                  <div class="col-2"></div>
+                  <div class="col-4">
+                      <button id="btnName" class="btn btn-outline-dark upperBordBtn" type="button" name="button">Guest</button>
+                  </div>
+                  <div class="col-4 ">
+                      <button id="btnLevel" class="btn btn-outline-dark upperBordBtn" type="button" name="button" >Easy</button>
+                  </div>
+                  <div class="col-2 "></div>
+              </div>
+          </div>  <!-- .container .btnContainer  -->
+
+
+          <table id="sudokuTable">
+              <tr id="line01">
+                  <td id="c01"> <input type="text" maxlength="1"> </td>
+                  <td id="c02"> <input type="text" maxlength="1"> </td>
+                  <td id="c03"> <input type="text" maxlength="1"> </td>
+                  <td id="c04"> <input type="text" maxlength="1"> </td>
+                  <td id="c05"> <input type="text" maxlength="1"> </td>
+                  <td id="c06"> <input type="text" maxlength="1"> </td>
+                  <td id="c07"> <input type="text" maxlength="1"> </td>
+                  <td id="c08"> <input type="text" maxlength="1"> </td>
+                  <td id="c09"> <input type="text" maxlength="1"> </td>
+              </tr>
+              <tr id="line02">
+                  <td id="c10"> <input type="text" maxlength="1"> </td>
+                  <td id="c11"> <input type="text" maxlength="1"> </td>
+                  <td id="c12"> <input type="text" maxlength="1"> </td>
+                  <td id="c13"> <input type="text" maxlength="1"> </td>
+                  <td id="c14"> <input type="text" maxlength="1"> </td>
+                  <td id="c15"> <input type="text" maxlength="1"> </td>
+                  <td id="c16"> <input type="text" maxlength="1"> </td>
+                  <td id="c17"> <input type="text" maxlength="1"> </td>
+                  <td id="c18"> <input type="text" maxlength="1"> </td>
+              </tr>
+              <tr id="line03">
+                  <td id="c19"> <input type="text" maxlength="1"> </td>
+                  <td id="c20"> <input type="text" maxlength="1"> </td>
+                  <td id="c21"> <input type="text" maxlength="1"> </td>
+                  <td id="c22"> <input type="text" maxlength="1"> </td>
+                  <td id="c23"> <input type="text" maxlength="1"> </td>
+                  <td id="c24"> <input type="text" maxlength="1"> </td>
+                  <td id="c25"> <input type="text" maxlength="1"> </td>
+                  <td id="c26"> <input type="text" maxlength="1"> </td>
+                  <td id="c27"> <input type="text" maxlength="1"> </td>
+              </tr>
+
+              <tr id="line04">
+                  <td id="c28"> <input type="text" maxlength="1"> </td>
+                  <td id="c29"> <input type="text" maxlength="1"> </td>
+                  <td id="c30"> <input type="text" maxlength="1"> </td>
+                  <td id="c31"> <input type="text" maxlength="1"> </td>
+                  <td id="c32"> <input type="text" maxlength="1"> </td>
+                  <td id="c33"> <input type="text" maxlength="1"> </td>
+                  <td id="c34"> <input type="text" maxlength="1"> </td>
+                  <td id="c35"> <input type="text" maxlength="1"> </td>
+                  <td id="c36"> <input type="text" maxlength="1"> </td>
+              </tr>
+              <tr id="line05">
+                  <td id="c37"> <input type="text" maxlength="1"> </td>
+                  <td id="c38"> <input type="text" maxlength="1"> </td>
+                  <td id="c39"> <input type="text" maxlength="1"> </td>
+                  <td id="c40"> <input type="text" maxlength="1"> </td>
+                  <td id="c41"> <input type="text" maxlength="1"> </td>
+                  <td id="c42"> <input type="text" maxlength="1"> </td>
+                  <td id="c43"> <input type="text" maxlength="1"> </td>
+                  <td id="c44"> <input type="text" maxlength="1"> </td>
+                  <td id="c45"> <input type="text" maxlength="1"> </td>
+              </tr>
+              <tr id="line06">
+                  <td id="c46"> <input type="text" maxlength="1"> </td>
+                  <td id="c47"> <input type="text" maxlength="1"> </td>
+                  <td id="c48"> <input type="text" maxlength="1"> </td>
+                  <td id="c49"> <input type="text" maxlength="1"> </td>
+                  <td id="c50"> <input type="text" maxlength="1"> </td>
+                  <td id="c51"> <input type="text" maxlength="1"> </td>
+                  <td id="c52"> <input type="text" maxlength="1"> </td>
+                  <td id="c53"> <input type="text" maxlength="1"> </td>
+                  <td id="c54"> <input type="text" maxlength="1"> </td>
+              </tr>
+
+              <tr id="line07">
+                  <td id="c55"> <input type="text" maxlength="1"> </td>
+                  <td id="c56"> <input type="text" maxlength="1"> </td>
+                  <td id="c57"> <input type="text" maxlength="1"> </td>
+                  <td id="c58"> <input type="text" maxlength="1"> </td>
+                  <td id="c59"> <input type="text" maxlength="1"> </td>
+                  <td id="c60"> <input type="text" maxlength="1"> </td>
+                  <td id="c61"> <input type="text" maxlength="1"> </td>
+                  <td id="c62"> <input type="text" maxlength="1"> </td>
+                  <td id="c63"> <input type="text" maxlength="1"> </td>
+              </tr>
+              <tr id="line08">
+                  <td id="c64"> <input type="text" maxlength="1"> </td>
+                  <td id="c65"> <input type="text" maxlength="1"> </td>
+                  <td id="c66"> <input type="text" maxlength="1"> </td>
+                  <td id="c67"> <input type="text" maxlength="1"> </td>
+                  <td id="c68"> <input type="text" maxlength="1"> </td>
+                  <td id="c69"> <input type="text" maxlength="1"> </td>
+                  <td id="c70"> <input type="text" maxlength="1"> </td>
+                  <td id="c71"> <input type="text" maxlength="1"> </td>
+                  <td id="c72"> <input type="text" maxlength="1"> </td>
+              </tr>
+              <tr id="line09">
+                  <td id="c73"> <input type="text" maxlength="1"> </td>
+                  <td id="c74"> <input type="text" maxlength="1"> </td>
+                  <td id="c75"> <input type="text" maxlength="1"> </td>
+                  <td id="c76"> <input type="text" maxlength="1"> </td>
+                  <td id="c77"> <input type="text" maxlength="1"> </td>
+                  <td id="c78"> <input type="text" maxlength="1"> </td>
+                  <td id="c79"> <input type="text" maxlength="1"> </td>
+                  <td id="c80"> <input type="text" maxlength="1"> </td>
+                  <td id="c81"> <input type="text" maxlength="1"> </td>
+              </tr>
+
+          </table>
+
+          <table id="btnTable" >
+              <tr>
+                  <td>
+                      <button id="clearBtn" type="button" onclick="clearBoard()" class="btn btn-danger" >Clear</button>
+                  </td>
+                  <td>
+                      <button id="generateBtn" onclick="generateSoduko()" class="btn btn-dark" type="button" >Generate!</button>
+                  </td>
+                  <td>
+                      <button id="checkBtn" type="button" onclick="checkSolution()" class="btn btn-primary">Check</button>
+                  </td>
+              </tr>
+
+          </table>
+
+    </div> <!-- .boardContainer  -->
+
+    <div class="bg-modal" >
+        <div class="modal-content" >
+            <div class="close" onclick="closeModal()">+</div>
+            <img id="avatarImg" src="avatar06.png" alt="" width="150px">
+
+            <p id="modalText" >Are you sure?</p>
+            <div class="modalBtnContainer1">
+                <button class="btn btn-info modal-ok-btn" type="button" name="button">OK</button>
+                <button class="btn btn-info" type="button" name="button" onclick="closeModal()">Cancel</button>
+            </div>
+            <div class="modalBtnContainer2">
+                <button class="btn btn-info modal-gen-btn" type="button" name="button">Yes</button>
+                <button class="btn btn-info" type="button" name="button" onclick="closeModal()">Cancel</button>
+            </div>
+            <div class="modalBtnContainer3">
+                <button class="btn btn-info modal-gen-over-btn" type="button" name="button">Start Over</button>
+                <button class="btn btn-info" type="button" name="button" onclick="closeModal()">Cancel</button>
+            </div>
+            <br><br>
+            <a id="modalRef" href="https://www.freepik.com/free-photos-vectors/business">*Business vector created by freepik - www.freepik.com</a>
+        </div><!-- .modal-content  -->
+    </div><!-- .bg-modal  -->
+
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" charset="utf-8"></script>
+      <script src="js/scripts.js" charset="utf-8"></script>
+
+  </body>
+</html>

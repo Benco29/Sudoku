@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="shortcut icon" href="sudoku.png">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <meta charset="utf-8">
+        <title>Sudoku</title>
+    </head>
+    <body id="registerBod">
+
+
+        <div class="boxReg">
+            <img id="logoImg" src="sudoku(1).png" alt="sudoku" width="250px"> <br>
+
+            <form class="registerForm" action="login.html" method="post" onsubmit="return validateForm()">
+                <div class="">
+                    <input class="regInput" id="regUsername" type="text" name="username" oninput="checkUsername()" onfocusout="clearRegInputBorder()" onfocus="clearRegText()" placeholder="username" >
+                    <p class="errorMsg"></p>
+                </div>
+                <div class="">
+                    <input class="regInput" id="regPassword" type="text" name="pass" oninput="checkPassword()" onfocusout="clearRegInputBorder()" onfocus="clearRegText()" placeholder="password">
+                    <p class="errorMsg"></p>
+                </div>
+                <div class="">
+                    <input class="regInput" id="regConfirm" type="text" name="conPass" oninput="checkPasswordMatch()" onfocusout="clearRegInputBorder()" onfocus="clearRegText()" placeholder="confirm password" >
+                    <p class="errorMsg"></p>
+                </div>
+                <div class="">
+                    <input class="regInput" id="regEmail" type="text" name="email" oninput="checkEmail()" onfocusout="clearRegInputBorder()" onfocus="clearRegText()" placeholder="email" >
+                    <p class="errorMsg"></p>
+                </div>
+                <br>
+                <button id="enterBtn" class="btn btn-dark regBtnEnter" type="submit">Register</button>
+                <button id="enterBtnLog" class="btn btn-dark" type="button" onclick="goToLoginPage()" > Login</button>
+                <!-- <button id="enterBtnLog" class="btn btn-dark" type="button" onclick="window.location.href='login.html';" > Login</button> -->
+            </form>
+
+        </div> <!-- end .box1 -->
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" charset="utf-8"></script>
+        <script src="js/scripts.js" charset="utf-8"></script>
+
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="shortcut icon" href="sudoku.png">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <meta charset="utf-8">
+        <title>Sudoku</title>
+    </head>
+    <body id="loginBod" onload="showSnackbar()">
+      <div id="snackBar">
+
+      </div>
+
+        <div class="boxLog ">
+            <img id="logoImg" src="sudoku(1).png" alt="sudoku" width="250px"> <br><br>
+
+            <form class="loginForm slide-in-top" action="welcome.html" method="post" onsubmit="return validateLogin()">
+                <div class="">
+                    <input id="logUsername" type="text" name="username" onfocus="clearLogText()" placeholder="username">
+                    <p class="errorMsg"></p>
+                </div>
+                <div class="">
+                    <input id="logPassword" type="text" name="pass" onfocus="clearLogText()" placeholder="password">
+                    <p class="errorMsg"></p>
+                </div>
+                <br>
+                <button id="loginBtn" class="btn btn-dark " type="submit"> Login</button>
+            </form>
+
+            <!-- <button  class="btn btn-dark"  onclick="changeToChosenLevel(0)"  type="button" name="button">Guest</button>
+            <button id="enterBtn" class="btn btn-dark" onclick="location.href='register.html';" type="button" name="button"></button> -->
+
+        </div> <!-- end .box1 -->
+
+        <div id="logSnackbar"></div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" charset="utf-8"></script>
+        <script src="js/scripts.js" charset="utf-8"></script>
+
+    </body>
+</html>
